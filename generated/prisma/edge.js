@@ -32,12 +32,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.6.0
- * Query Engine version: f676762280b54cd07c770017ed3711ddde35f37a
+ * Prisma Client JS version: 6.4.1
+ * Query Engine version: a9055b89e58b4b5bfb59600785423b1db3d0e75d
  */
 Prisma.prismaVersion = {
-  client: "6.6.0",
-  engine: "f676762280b54cd07c770017ed3711ddde35f37a"
+  client: "6.4.1",
+  engine: "a9055b89e58b4b5bfb59600785423b1db3d0e75d"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -142,17 +142,18 @@ const config = {
     "schemaEnvPath": "../../.env"
   },
   "relativePath": "../../prisma",
-  "clientVersion": "6.6.0",
-  "engineVersion": "f676762280b54cd07c770017ed3711ddde35f37a",
+  "clientVersion": "6.4.1",
+  "engineVersion": "a9055b89e58b4b5bfb59600785423b1db3d0e75d",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://rinta_nagayama_uhuru:rinta@localhost:5432/firstapp?schema=public"
+        "value": null
       }
     }
   },

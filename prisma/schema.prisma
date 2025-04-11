@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -14,8 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
 model Post{
   id Int @default(autoincrement()) @id
-  content String
+  content String 
   created_at DateTime @default(now())
 }

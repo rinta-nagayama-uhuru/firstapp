@@ -1,4 +1,7 @@
-module.exports = (req, res) => {
-  const post = "これはコントローラーで定義した変数を確認するための文字列です";
-  res.render("posts/allPosts", {post});
+const {PrismaClient} = require("@prisma/client");
+const prisma = new PrismaClient();
+
+module.exports = async(req, res) => {
+  const posts = await prisma.post.findMany();
+  res.render("posts/allPosts", {posts});
 }
