@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-  res.send("トップページ")
+  const post = "これはコントローラーで定義した変数を確認するための文字列です";
+  res.render("posts/allPosts", {post});
 }
