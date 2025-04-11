@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+//クライアントから送信されたデータを解析し、req.bodyオブジェクトとしてアクセスできるようにする
+app.use(express.urlencoded({ extended: true}));
+
 //テンプレートエンジンにEJSを使用するように設定
 app.set("view engine", "ejs");
 
