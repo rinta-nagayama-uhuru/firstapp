@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    build: .
+    ports:
+    - "3000:3000"
+    depends_on:
+    - db
+    env_file:
+    - .env
+    volumes:
+      - .:/app  #現在のディレクトリをコンテナ内の/appにマウント
+    
+  db:
+    image: postgres:14.11
+    container_name: db
+    ports:
+     - "5433:5432"
+    env_file:
+        - .env
+    volumes:
+        - firstapp-volume:/var/lib/postgresql/data
+  
+volumes:
+  firstapp-volume:
