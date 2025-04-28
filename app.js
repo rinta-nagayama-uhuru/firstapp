@@ -10,7 +10,6 @@ app.use(routers);
 
 module.exports = app;
 
-app.use((err, req, res, next) => {
-  console.error('エラーキャッチ:', err); // ここで詳細エラー出力
-  res.status(500).send('Internal Server Error');
+app.use((req, res, next) => {
+  res.redirect(302, '/non-existent-page');
 });
